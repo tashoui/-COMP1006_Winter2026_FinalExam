@@ -108,9 +108,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <label>Confirm Password</label>
         <input type="password" name="confirm_password" class="form-control" required>
     </div>
-    <div class="mb-3">
-        <div class="g-recaptcha" data-sitekey="6LcYeqUsAAAAADqNULyP_92ijJ63kZGxriB3qFzS"></div>
-    </div>
     <button type="submit" class="btn btn-primary">Register</button>
   </form>
 
