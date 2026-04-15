@@ -56,7 +56,7 @@ if (empty($first_name) || empty($last_name)) {
     }
 
      // Insert data into database
-    $sql = "INSERT INTO resumes (first_name, last_name, image_title, uploaded_image)
+    $sql = "INSERT INTO uploads (first_name, last_name, image_title, uploaded_image)
             VALUES ('$first_name', '$last_name', $image_title, '$uploaded_image')";
 
 ?>
