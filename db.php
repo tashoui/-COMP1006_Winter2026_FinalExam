@@ -13,11 +13,23 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-mysqli_query($conn, "CREATE TABLE IF NOT EXISTS images (
+mysqli_query($conn, "CREATE TABLE IF NOT EXISTS uploads (
     id INT AUTO_INCREMENT PRIMARY KEY,
     first_name VARCHAR(100) NOT NULL,
     last_name VARCHAR(100) NOT NULL,
     image_title VARCHAR(100) NOT NULL,
-    image VARCHAR(255),
+    uploaded_image VARCHAR(255),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 )");
+
+// Create users table if it doesn't exist
+mysqli_query($conn, "CREATE TABLE IF NOT EXISTS users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(100) NOT NULL,
+    last_name VARCHAR(100) NOT NULL,
+    email VARCHAR(150) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+)");
+
+?>
