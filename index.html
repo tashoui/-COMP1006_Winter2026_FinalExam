@@ -7,7 +7,7 @@
 </head>
 
 <body>
-    <h1>Register</h1>
+    <h1>Upload an Image</h1>
     <a href="view.php">View All Images</a>
 
     <form action="submit.php" method="POST">
@@ -21,8 +21,9 @@
     <input type="text" name="image_title" class="form-control" required>
 
     <label>Image</label>
-    <input type="file" name="uploaded_image" class="form-control" accept="image/*">
+    <input type="file" name="uploaded_image" class="form-control" accept="image/*" required>
 
     <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 </body>
+</html>
